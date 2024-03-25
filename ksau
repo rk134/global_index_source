@@ -85,7 +85,7 @@ sanity_checks() {
 
 refresh() {
     echo "${aqua}Downloading latest rclone config${normal}"
-    wget https://gist.githubusercontent.com/Hakimi0804/aabebeea8c1ce0c5a6968fc0d78ed5ae/raw/rclone.conf -O rclone.conf &>/dev/null
+    wget https://gist.githubusercontent.com/Hakimifr/aabebeea8c1ce0c5a6968fc0d78ed5ae/raw/rclone.conf -O rclone.conf &>/dev/null
     if [ "$?" -ne 0 ]; then
         echo "Config download failed!"
         return
@@ -360,7 +360,7 @@ update() {
     tmpfilename=ksau-$RANDOM
 
     echo "Fetching"
-    curl --progress-bar -Lo "$tmpfilename" https://raw.githubusercontent.com/ksauraj/global_index_source/master/ksau
+    curl --progress-bar -Lo "$tmpfilename" https://raw.githubusercontent.com/rk134/global_index_source/master/ksau
     upline 1
     clearline
     upline 1
